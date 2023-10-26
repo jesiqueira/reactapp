@@ -49,6 +49,8 @@ const App = () => {
     .reduce((a, b) => a + b);
   const produto = ['Notebook', 'Tablet', 'Smartphone'];
 
+  const dadosProduto = produtos.filter((produto) => +produto.preco.replace('R$ ', '') > 1500);
+
   return (
     <>
       <p>Nome: {dados.cliente}</p>
@@ -72,14 +74,16 @@ const App = () => {
       <p>---------Exercício-----------</p>
 
       <ul>
-        {produtos.map((produto) => (
+        {dadosProduto.map((produto) => (
           <li key={produto.id}>
             <h1>{produto.nome}</h1>
             <h3>Preço: {produto.preco}</h3>
             <ul>
-            {produto.cores.map(cor => (
-              <li key={cor}><p style={{background: cor, color: '#fff'}}>{cor}</p></li>
-            ))}
+              {produto.cores.map((cor) => (
+                <li key={cor}>
+                  <p style={{ background: cor, color: '#fff' }}>{cor}</p>
+                </li>
+              ))}
             </ul>
           </li>
         ))}
