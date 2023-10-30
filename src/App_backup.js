@@ -76,9 +76,7 @@ const App = () => {
           <li key={filme}>{filme}</li>
         ))}
       </ul>
-
-      <p>---------Exercício-----------</p>
-
+      <p>---------Exercício-----------</p> 
       <ul>
         {dadosProduto.map((produto) => (
           <li key={produto.id}>

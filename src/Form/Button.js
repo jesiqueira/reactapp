@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Button = () => {
-  return <button>Enviar</button>;
+  return <button>Clique</button>;
 };
 
 export default Button;

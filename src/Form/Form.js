@@ -4,17 +4,11 @@ import Button from './Button';
 
 function Form() {
   return (
-    <form>
-      <p>
-        <label htmlFor="nome">Nome: </label>
-        <Input />
-      </p>
-      <p>
-        <label htmlFor="cpf">CPF: </label>
-        <Input />
-      </p>
+    <div>
+      <Input id="email" label="Email" required />
+      <Input id="password" type="password" label="Password" />
       <Button />
-    </form>
+    </div>
   );
 }
 
